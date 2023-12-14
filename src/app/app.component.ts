@@ -19,12 +19,10 @@ export class AppComponent implements OnInit {
   handleValidate() {
     const isValid = iinCheck(String(this.iin));
     this.isValid = isValid;
-    document.body.classList.value = isValid ? 'valid' : 'notvalid';
     this.isChecked = true;
   }
   handleKeyDown(event: any) {
     this.isChecked = false;
-    document.body.classList.value = '';
     if (event.key === 'Enter' && this.iin) {
       this.handleValidate();
     }
